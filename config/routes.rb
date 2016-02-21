@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get 'stylebook' => 'stylebook#index'
+  resources :likes
+  resources :stylists
+  resources :styles
+  resources :users
 end

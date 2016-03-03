@@ -11,6 +11,8 @@ class UsersController < ApplicationController
       arr << { "#{key}" => val.count }
       arr
     end
-    @userlikedesigners = user.like.designers
+    @user = current_user
+    @likes = Like.find_by(user_id: @user.id)
+    @styles = Style.where(id: @style.id)
   end
 end

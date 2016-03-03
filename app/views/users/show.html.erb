@@ -4,10 +4,9 @@
     <!-- <a href="#"></a> -->
   </div>
   <div class="media-body">
-  <% current_user.likes.each do |like| %>
-  <% userlikedesigners.each do |designer| %>
+  <% @styles.each do |like| %>
     <img class="media-object" src="http://www.tarl.jp/wp-content/files_mf/16.jpeg" alt="">
-    <h4 class="media-heading"><%= like.designer %> / <%= designer.shop_name %></h4>
+    <h4 class="media-heading"><%= @designer %> / <%= @shop.name %></h4>
     <p>designerSNSlink,shopHPlink</p>
   <% end %>
   </div>

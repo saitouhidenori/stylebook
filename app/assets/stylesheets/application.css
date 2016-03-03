@@ -1,0 +1,69 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap
+ *= require_tree .
+ *= require_self
+ */
+
+/*top img img部分*/
+.relative {
+  display:inline-block;
+  margin:0 auto;
+}
+
+.relative img {
+  width: 100%;
+  height: 100%;
+}
+/*top img img部分*/
+
+
+/*top img テキスト部分*/
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    bottom: 280px;
+    color: #fff;
+    padding-left: 50px;
+}
+/*top img テキスト部分*/
+
+/*views/designers/show.html.erb部分*/
+.designer-introduction {
+  display: inline;
+  margin: 0 auto;
+  width:1000px;
+}
+
+.clearfix:after {
+  content:"";
+  clear: both;
+  display: block;
+}
+
+.designer-img {
+  float: left;
+  width:200px;
+  margin-left: 80px;
+}
+.designer-profile{
+  float: right;
+  width: 700px
+
+}
+
+.media-object {
+  width: 120px;
+}

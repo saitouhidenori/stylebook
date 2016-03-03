@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Scrap Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!---ここまでbootstrapテンプレート-->
+
+    <title>Scrap</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+
+
+
+
+  <body>
+    <h1>Hello, world!</h1>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/styles">title</a>
+        </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Page <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <% if user_signed_in? %>
+              <li><a href="/users/<%= current_user.id %>">My Scrap</a></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+                <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+              <% end %>
+            </ul>
+          </li>
+          <span class="sr-only">(current)</span>
+        </li>
+        <li><a href="#">News</a></li>
+        <li><a herf="#">Movie</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">length <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'ALL Length',"styles/index" %></li>
+            <li><a href="#">Short</a></li>
+            <li><a href="#">Bob</a></li>
+            <li><a href="#">Medium</a></li>
+            <li><a href="#">Long</a></li>
+            <li><a href="#">Mens</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="http://beauty.hotpepper.jp/svcSA/">hotpepper-beauty</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Area <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">ALL Area</a></li>
+            <li><a href="#">地域から</a></li>
+            <li><a href="#">路線沿線から</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="サイト内検索">
+        </div>
+        <button type="submit" class="btn btn-default">検索</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+
+
+<%= yield %>
+
+
+
+
+  <footer>
+    <ol class="breadcrumb">
+      <li><a href="#">会社概要</a></li>
+      <li><a href="#">利用規約</a></li>
+      <li><a href="#">よくあるご質問</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    <% if designer_signed_in? %>
+
+      <a href="/designers/<%= current_designer.id %>">my page</a>
+
+      <li><%= link_to "designer_signed_out", destroy_designer_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "designer_signed_in", new_designer_session_path, class: 'post' %></li>
+      <li><%= link_to "新規登録", new_designer_registration_path, class: 'post' %>
+      <% end %>
+      <li class="active">Data</li>
+    </ol>
+  </footer>
+    <!-- bootstrapテンプレート jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---ここまでbootstrap jQyeryテンプレート-->
+
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<h3><%= current_user.email %> <span>さんのマイページ</span></h3>
+<div class="media">
+  <div class="media-left">
+    <!-- <a href="#"></a> -->
+  </div>
+  <div class="media-body">
+  <% current_user.likes.each do |like| %>
+  <% userlikedesigners.each do |designer| %>
+    <img class="media-object" src="http://www.tarl.jp/wp-content/files_mf/16.jpeg" alt="">
+    <h4 class="media-heading"><%= like.designer %> / <%= designer.shop_name %></h4>
+    <p>designerSNSlink,shopHPlink</p>
+  <% end %>
+  </div>
+</div>
+

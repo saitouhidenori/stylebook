@@ -1,0 +1,12 @@
+
+
+<% @styles.each do |style| %>
+    <div class="col-xs-6 col-md-3">
+    <a href="/styles/<%= style.designer %>">
+      <img src="<%= style.image %>" class="img-thumbnail">
+      <h3 name="<%= style.designer %>">
+     </a>
+   </div>
+  <%end%>
+
+  <%= paginate @styles %>

@@ -1,0 +1,18 @@
+<div class="input-group">
+  <%= form_tag('/scrap', method: :post) do %>
+<!--名前入力フォーム-->
+   <!--  <span class="input-group-addon" id="basic-addon1">designer-name</span>
+    <input neme="designer" type="text" class="form-control" placeholder="designer-name" aria-describedby="basic-addon1"> -->
+<!--店舗名入力フォーム-->
+    <!-- <span class="input-group-addon" id="basic-addon1">shop-name</span>
+    <input neme="shop_name" type="text" class="form-control" placeholder="shop-name" aria-describedby="basic-addon1">
+ --><!--image_url入力フォーム-->
+     <label for="basic-url">style image URL</label>
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon3">https://style_image/:id/</span>
+      <input name="image" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+<!--SENTボタン-->
+      <input type="submit" value="SENT">
+    </div>
+  <% end %>
+</div>

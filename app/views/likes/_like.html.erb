@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+  <% if style.like_user(current_user.id) %>
+    <%= button_to style_like_path(style,current_user), method: :delete, id: "like-button", remote: true do %>
+      <%= image_tag("icon_red_heart.svg") %>
+    <span><%= style.likes_count %></span>
+    <% end %>
+  <% else %>
+    <%= button_to style_likes_path(style), id: "like-button", remote: true do %>
+      <%= image_tag("icon_heart.svg") %>
+      <span><%= style.likes_count %></span>
+      <% end %>
+  <% end %>
+    <% else %>
+      <%= image_tag("icon_heart.svg") %>
+      <span><%= style.likes_count %></span>
+<% end %>

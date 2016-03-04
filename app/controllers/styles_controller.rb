@@ -3,6 +3,9 @@ class StylesController < ApplicationController
   def top
   end
 
+  def news
+  end
+
   def index
     @styles = Style.includes(:designer).order("id ASC").page(params[:page]).per(20)
     @style = Style.all

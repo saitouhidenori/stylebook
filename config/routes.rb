@@ -14,6 +14,7 @@ devise_for :users, controllers: {
 
 root 'styles#top'
 get 'styles/index' => 'styles#index'
+get 'styles/news' => 'styles#news'
 get 'styles/:id' => 'styles#show'
 
   resources :users, only: :show

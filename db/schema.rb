@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301095515) do
+ActiveRecord::Schema.define(version: 20160304080825) do
 
   create_table "designers", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 20160301095515) do
   create_table "styles", force: :cascade do |t|
     t.integer  "designer_id", limit: 4
     t.text     "image",       limit: 65535
-    t.string   "designer",    limit: 255
-    t.string   "shop_name",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "likes_count", limit: 4,     default: 0

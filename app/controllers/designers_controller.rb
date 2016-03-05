@@ -10,7 +10,7 @@ class DesignersController < ApplicationController
   end
 
   def show
-    @style = Style.find(params[:id])
+    @designer = Designer.find(params[:id])
   end
 
 end

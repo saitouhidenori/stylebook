@@ -7,34 +7,30 @@
     <div class="designer-profile">
     <!--ここからdesigner profile -->
       <h3><%= @designer %> / <%= @shop_name %></h3>
-      <p>/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文t/est/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文t/est/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文</p>
+      <a>
+        <span class="label label-default">Instagram</span>
+        <span class="label label-primary">FeceBook</span>
+        <span class="label label-success">Blog</span>
+        <span class="label label-info">Twitter</span>
+      </a>
+      <p>
+        /test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文t/est/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文t/est/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文
+      </p>
     </div>
     <!--ここまでdesigner profile -->
-
-    <div class="designer-sns">
-    <!--ここからsns linkタグと紹介文-->
-    <!--ここまでsns linkタグと紹介文-->
-    </div>
-
-  </div>
+</div>
   <!-- clss designer-introduction ここまで -->
-
-
-
-  <div class="row">
+<div class="row">
   <% @styles.each do |style| %>
     <div class="col-xs-6 col-md-3">
     <a href="/styles/<%= style.designer %>">
-      <img src="<%= style.image %>">
+      <img src="<%= style.image %>" class="img-thumbnail">
       <h3 name="<%= style.designer %>">
      </a>
-   </div>
+    </div>
   <%end%>
-
 </div>
-
-<a class="post" href="/designer/new">投稿</a>
-<h2>testetstestestes</h2>
+<!-- <a class="post" href="/designer/new">投稿</a> -->
 <%= paginate @styles %>
 
 

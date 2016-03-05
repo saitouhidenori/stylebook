@@ -25,8 +25,9 @@ get 'styles/:id' => 'styles#show'
   # resources :likes, only: [:create, :destroy]
 # end
 get 'designer/new'=> 'designers#new'
-get 'designers/:id'=> 'designers#index'
+# get 'designers/:id'=> 'designers#index'
 get 'users/:id' => 'users#show'
+
 
 get 'designers/:id' => 'designers#show'
 

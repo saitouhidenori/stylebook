@@ -1,0 +1,3 @@
+id,"email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at",sign_in_count,"current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","created_at","updated_at","name"
+1,"saitou@softbank.ne.jp","$2a$10$YFsu6fixALSSyRdavWK7C.xEX04dH/3Y4ZiPwwsRgbpfzH.cYjFVi",NULL,NULL,NULL,8,"2016-03-03 09:43:04","2016-03-03 09:02:06","::1","::1","2016-03-01 10:27:47","2016-03-03 09:43:04",NULL
+2,"testuser@user.com","$2a$10$kTVUyeiGGiqhMDF3zjHeCuaJ6QSMbWzj8YU9FqK/MWQlmfInDRVaK",NULL,NULL,NULL,13,"2016-03-05 10:28:48","2016-03-05 10:01:39","::1","::1","2016-03-03 09:00:45","2016-03-05 10:28:48",NULL

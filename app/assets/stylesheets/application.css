@@ -71,3 +71,20 @@
 .user-show-designer {
   float: left;
 }
+
+.likes-heart {
+  width: 60px;
+  height: 34px;
+  position:relative;
+  top:-38px;
+  left:0px;
+  background-color: #FFFFE0;
+}
+#like-button {
+  width:60px;
+  height: 34px;
+  position:relative;
+  background-color: #FFFFE0;
+  border: 0px;
+
+}

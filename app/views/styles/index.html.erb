@@ -1,10 +1,12 @@
 
 <% @styles.each do |style| %>
   <div class="col-xs-6 col-md-3">
-    <a href="/styles/<%= style.designer %>"></a>
+  <!--   <a href="/styles/<%= style.designer %>"></a> -->
     <img src="<%= style.image %>" class="img-thumbnail"></br>
     <!-- <%= style.designer %> -->
+    <div class="likes-heart">
     <%= render partial: "likes/like", locals: { style: style } %>
+    </div>
    </a>
  </div>
 <%end%>

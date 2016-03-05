@@ -10,3 +10,31 @@
     </div>
   <% end %>
 </div>
+
+<div class="user-introduction">
+  <h5><%= current_user.email %><span>さんの好みのスタイルを得意とする技術者
+  </span></h5>
+</div>
+<div class="media">
+  <% @designers.each do |designer| %>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+      <%= image_tag("s_designer_img.jpeg") %><br/>
+      </div>
+      <div class="user-show-designer">
+        <h4>
+          <a><%= designer.designer %> / <%= designer.shop_name %></a>
+        </h4>
+          <a>
+            <span class="label label-default">Instagram</span>
+            <span class="label label-primary">FeceBook</span>
+            <span class="label label-success">Blog</span>
+            <span class="label label-info">Twitter</span>
+          </a>
+          <p>
+            /test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/<br/>/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/<br/>PR文/test/PR文/test/PR文t/est/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/<br/>test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/PR文/test/.....
+          </p>
+      </div>
+    </div>
+  <% end %>
+</div>
